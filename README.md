@@ -1,3 +1,12 @@
 Python-Practice
 ===============
-https://www.edx.org/course/mitx/mitx-6-00-1x-introduction-computer-2841
+
+GENERAL NOTES
+---------------
+A collection of various practice problems and tutorials in the Python language.
+
+---------------
+
+9/5/2014
+- Put Readme into a more formal format.
+- Started Conditonals & Control Flow

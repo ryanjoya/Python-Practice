@@ -1,0 +1,39 @@
+#Assume s is a string of lower case characters.
+
+#Write a program that prints the longest substring of s in which the letters occur in alphabetical order. For example, if s = 'azcbobobegghakl', then your program should print
+
+#Longest substring in alphabetical order is: beggh
+In the case of ties, print the first substring. For example, if s = 'abcbcd', then your program should print
+
+#Longest substring in alphabetical order is: abc
+
+#My Answer:
+
+from itertools import count
+
+def long_alphabet(input_string):
+    maxsubstr = input_string[0:0] # empty slice (to accept subclasses of str)
+    for start in range(len(input_string)): # O(n)
+        for end in count(start + len(maxsubstr) + 1): # O(m)
+            substr = input_string[start:end] # O(m)
+            if len(substr) != (end - start): # found duplicates or EOS
+                break
+            if sorted(substr) == list(substr):
+                maxsubstr = substr
+    return maxsubstr
+
+bla = (long_alphabet(s))
+print "Longest substring in alphabetical order is: %s" %bla
+
+#Their Answer:
+
+curString = s[0]
+longest = s[0]
+for i in range(1, len(s)):
+    if s[i] >= curString[-1]:
+        curString += s[i]
+        if len(curString) > len(longest):
+            longest = curString
+    else:
+        curString = s[i]
+print 'Longest substring in alphabetical order is:', longest

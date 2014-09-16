@@ -1,0 +1,6 @@
+def myFunction(argument):
+   """
+   Docstring goes here. Explain what type argument(s) should have, and what your function
+   is going to return.
+   """
+   < Code for your function (the body of the function) goes here >

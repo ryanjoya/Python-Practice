@@ -1,0 +1,13 @@
+#Assume s is a string of lower case characters.
+
+#Write a program that counts up the number of vowels contained in the string s. Valid vowels are: 'a', 'e', 'i', 'o', and 'u'. For example, if s = 'azcbobobegghakl', your program should print:
+
+#Number of vowels: 5
+
+anum = s.count("a", 0, len(s));
+enum = s.count("e", 0, len(s));
+inum = s.count("i", 0, len(s));
+onum = s.count("o", 0, len(s));
+unum = s.count("u", 0, len(s));
+vowelnum = anum + enum + inum + onum + unum;
+print vowelnum;

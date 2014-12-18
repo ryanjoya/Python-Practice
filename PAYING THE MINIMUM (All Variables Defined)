@@ -1,0 +1,28 @@
+payment=0.0
+balance=4213
+annualInterestRate=0.2
+monthlyPaymentRate=0.04
+Month=1
+tpaid = 0
+while (Month<13):
+    
+    monthlyInterestRate = annualInterestRate/12
+    
+    minMonthlyPaymentRate = monthlyPaymentRate*balance
+    
+    balance = (balance-minMonthlyPaymentRate)*(1+monthlyInterestRate)
+    
+    payment = payment+minMonthlyPaymentRate
+    tpaid = tpaid + payment
+    
+    print ('Month: ',Month)
+    print ('Minimum monthly payment:',str(round(minMonthlyPaymentRate,2)))
+    print ('Remaining balance:',str(round(balance,2)))
+ 
+    if(Month == 12):
+        print ('Total Paid:',str(round(tpaid,2)))
+        print ('Remaining balance:',str(round(balance,2)))
+
+    payment = payment-minMonthlyPaymentRate
+
+    Month += 1
